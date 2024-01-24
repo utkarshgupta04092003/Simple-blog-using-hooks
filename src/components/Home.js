@@ -11,8 +11,6 @@ import { db } from "../firebase";
 function Home() {
   const [posts, setPosts] = useState([]);
 
- 
-
   useEffect(() => {
     (async () => {
       const q = query(collection(db, "posts"), orderBy("createdAt", "desc"));
