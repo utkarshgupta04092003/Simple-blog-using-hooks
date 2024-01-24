@@ -11,21 +11,7 @@ import { db } from "../firebase";
 function Home() {
   const [posts, setPosts] = useState([]);
 
-  // useEffect(() => {
-  //     // fetch data from firebase
-
-  //     onSnapshot(collection(db, "posts"), (querySnapshot) => {
-  //     const newData = querySnapshot.docs.map((doc) => {
-  //        return{
-  //             id: doc.id,
-  //             ...doc.data(),
-  //        }
-  //     });
-  //     setPosts(newData);
-  //     console.log('posts',posts);
-
-  //     });
-  // }, []);
+ 
 
   useEffect(() => {
     (async () => {
@@ -46,7 +32,7 @@ function Home() {
   return (
     <div className="home">
       <h1>Tech Blog</h1>
-      <div id="blog-by">Utkarsh</div>
+      <div id="blog-by" >Utkarsh</div>
 
       {posts.map((post, index) => (
         <div className="post" key={`post-${index}`}>
@@ -60,3 +46,4 @@ function Home() {
   );
 }
 export default Home;
+
